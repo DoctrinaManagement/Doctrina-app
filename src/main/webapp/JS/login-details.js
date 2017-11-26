@@ -2,7 +2,7 @@ var check_var;
 function check_but(str) {
     check_var = str;
 }
-var Setrole = 'teacher';
+var Setrole = 'Teacher';
 
 function roleSet(x) {
     
@@ -10,7 +10,7 @@ function roleSet(x) {
 }
 window.fbAsyncInit = function() {
 FB.init({
-  appId      : '1761766334129049',
+  appId      : '938434706322710',
   cookie     : true,
   xfbml      : true,
   version    : 'v2.10'

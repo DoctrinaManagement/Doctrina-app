@@ -7,6 +7,15 @@
   </welcome-file-list>
 <!--/1st landing page when app open is execute  -->
 
+<servlet>
+        <servlet-name>ggg</servlet-name>
+        <servlet-class>sign.check</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ggg</servlet-name>
+        <url-pattern>/doctrina</url-pattern>
+    </servlet-mapping>
 
 <!-- signup page -->
 
@@ -32,6 +41,28 @@
   
 <!--/signup page  -->
 
+<!--/signin page  -->
 
+    <servlet>
+        <servlet-name>resultSignin</servlet-name>
+        <servlet-class>sign.Signin</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>resultSignin</servlet-name>
+        <url-pattern>/doctrina.signin</url-pattern>
+    </servlet-mapping>
+    
+    <filter>  
+      <filter-name>signin</filter-name>  
+      <filter-class>auth.SigninAuth</filter-class>  
+    </filter>  
+  
+    <filter-mapping>  
+      <filter-name>signin</filter-name>  
+      <url-pattern>/doctrina.signin</url-pattern>  
+    </filter-mapping>
+    
+ <!--/signin page  -->
 
 </web-app>

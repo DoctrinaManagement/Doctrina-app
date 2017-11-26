@@ -103,7 +103,7 @@
                         <p>Student</p>
                     </label>
                 </div>
-                <meta name="google-signin-client_id" content="176409898115-l04app084b81o9fhn2iu6dppekbbv45n.apps.googleusercontent.com">
+                <meta name="google-signin-client_id" content="176409898115-eoi5sggfanbiq08h1e6soi4vtcm30mgf.apps.googleusercontent.com">
                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
                 <div class="fb-login-button a" style="height: 36px;width: 120px;border-radius: 52px !important;box-shadow: 0 4px 4px 0 rgba(0,0,0,.25), 0 -2px 4px 0 rgba(0,0,0,.25) !important;background: linear-gradient(#4c69ba, #3b55a0);padding: 8px;box-sizing: border-box;" onlogin="checkLoginState();"></div>
                 <div>Already this available</div>
@@ -113,7 +113,7 @@
             <div class="blur"></div>
             <div class="g-f">
                 <p>Sign In with</p>
-                <meta name="google-signin-client_id" content="176409898115-l04app084b81o9fhn2iu6dppekbbv45n.apps.googleusercontent.com">
+                <meta name="google-signin-client_id" content="176409898115-eoi5sggfanbiq08h1e6soi4vtcm30mgf.apps.googleusercontent.com">
                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
                 <div class="fb-login-button a" data-size="medium" style="height: 36px;width: 120px;border-radius: 52px !important;box-shadow: 0 4px 4px 0 rgba(0,0,0,.25), 0 -2px 4px 0 rgba(0,0,0,.25) !important;background: linear-gradient(#4c69ba, #3b55a0);padding: 8px;box-sizing: border-box;" onlogin="checkLoginState();"></div>
                 <div>Already this available</div>

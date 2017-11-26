@@ -34,8 +34,8 @@ public class SignupAuth implements Filter {
 			HashMap<String, String> details = get.resultSetToHashMap(rs);
 
 			if (details.size() == 0) {
-				if (request.getParameter("role").equals("teacher")
-						|| request.getParameter("role").equals("student")) {
+				if (request.getParameter("role").equals("Teacher")
+						|| request.getParameter("role").equals("Student")) {
 						    
 					chain.doFilter(request, response);
 				} 
