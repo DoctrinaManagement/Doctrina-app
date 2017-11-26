@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <web-app >
+
+<!--1st landing page when app open is execute  -->
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>jsp/landing-page.jsp</welcome-file>
   </welcome-file-list>
+<!--/1st landing page when app open is execute  -->
+
+
+<!-- signup page -->
+
+    <servlet>
+        <servlet-name>resultSignup</servlet-name>
+        <servlet-class>sign.Signup</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>resultSignup</servlet-name>
+        <url-pattern>/doctrina.signup</url-pattern>
+    </servlet-mapping>
+    
+    <filter>  
+      <filter-name>signup</filter-name>  
+      <filter-class>auth.SignupAuth</filter-class>  
+  </filter>  
+  
+  <filter-mapping>  
+      <filter-name>signup</filter-name>  
+      <url-pattern>/doctrina.signup</url-pattern>  
+  </filter-mapping>
+  
+<!--/signup page  -->
+
+
+
 </web-app>
