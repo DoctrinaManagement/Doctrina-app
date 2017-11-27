@@ -17,7 +17,6 @@ public class Signin extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
 		PrintWriter writer = response.getWriter();
 		DatabaseConnection data = new DatabaseConnection();
 		Connection connection = data.connect();
@@ -26,6 +25,7 @@ public class Signin extends HttpServlet {
 		ReUsable get = new ReUsable();
 			
 		try {
+			System.out.println(request.getParameter("user_id"));
 			stmt = connection.createStatement();
 			String user = "'" + request.getParameter("user_id") + "'";
 			ResultSet rs = stmt
@@ -33,7 +33,7 @@ public class Signin extends HttpServlet {
 							+ user);
 
 			HashMap<String, String> details = get.resultSetToHashMap(rs);
-			if(details.get("image").equals(request.getParameter("image")+"")) {
+			if(details.get("image").equals(request.getParameter("image")+"") == false || details.get("name").equals(request.getParameter("name")+"") == false) {
 				String userId = "'" + request.getParameter("user_id") + "'";
 				String name = "'" + request.getParameter("name") + "'";
 				String emailId = "'" + request.getParameter("email_id") + "'";
@@ -51,8 +51,7 @@ public class Signin extends HttpServlet {
 				session.setAttribute(values, details.get(values));
 				
 			}
-            
-            // cookie create ...
+			// cookie create ...
 //			String cookie = get.CookieCreate();
 //			Cookie cookies=new Cookie("Name", cookie);//creating cookie object  
 //            response.addCookie(cookies);//adding cookie in the response  

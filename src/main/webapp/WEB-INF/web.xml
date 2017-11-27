@@ -41,7 +41,7 @@
   
 <!--/signup page  -->
 
-<!--/signin page  -->
+<!--signin page  -->
 
     <servlet>
         <servlet-name>resultSignin</servlet-name>
@@ -65,4 +65,17 @@
     
  <!--/signin page  -->
 
+
+<!--home page  -->
+
+    <servlet>
+        <servlet-name>home</servlet-name>
+        <jsp-file>jsp/home.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/doctrina.home</url-pattern>
+    </servlet-mapping>
+<!--/home page  -->
 </web-app>
