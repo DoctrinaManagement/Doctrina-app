@@ -7,15 +7,6 @@
   </welcome-file-list>
 <!--/1st landing page when app open is execute  -->
 
-<servlet>
-        <servlet-name>ggg</servlet-name>
-        <servlet-class>sign.check</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ggg</servlet-name>
-        <url-pattern>/doctrina</url-pattern>
-    </servlet-mapping>
 
 <!-- signup page -->
 
