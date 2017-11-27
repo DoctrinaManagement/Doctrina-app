@@ -29,7 +29,7 @@ public class SigninAuth implements Filter {
     			String user = "'" + request.getParameter("user_id") + "'";
     			ResultSet rs = stmt
     					.executeQuery("select * from userdetails where user_id = "
-    							+ user);
+    							+ user+";");
     
     			ReUsable get = new ReUsable();
     			HashMap<String, String> details = get.resultSetToHashMap(rs);

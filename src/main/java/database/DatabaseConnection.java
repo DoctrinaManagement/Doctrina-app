@@ -5,8 +5,8 @@ import java.sql.*;
  * @author Pandeeswaran
  */
 public class DatabaseConnection {
-	private final String url = "jdbc:postgresql://35.188.220.205:5432/doctrina";
-	//private final String url = "jdbc:postgresql://localhost:5432/doctrina";
+	//private final String url = "jdbc:postgresql://35.188.220.205:5432/doctrina";
+	private final String url = "jdbc:postgresql://localhost:5432/doctrina";
     private final String user = "postgres";
     private final String password = "postgres";
     
