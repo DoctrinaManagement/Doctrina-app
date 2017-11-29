@@ -10,7 +10,7 @@ function roleSet(x) {
 }
 window.fbAsyncInit = function() {
 FB.init({
-  appId      : '938434706322710',
+  appId      : '1761766334129049',
   cookie     : true,
   xfbml      : true,
   version    : 'v2.10'
@@ -122,7 +122,7 @@ function ajax(profile) {
         //response
         if (data == "ok") {
 
-            location.href = "/doctrina.home";
+            location.href = "/doctrina.index.do";
         }
         else {
             if(profile.login == "fb") {

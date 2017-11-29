@@ -33,10 +33,9 @@ public class Signup extends HttpServlet {
 			String notification = "'"
 					+ "Welcome to Doctrina. Learn Anything easy and better ..."
 					+ "'";
-
-
-			stmt.executeUpdate("insert into userdetails values(" + userId + ","
-					+ name + "," + emailId + "," + image + "," + role + ");");
+			String ss = "insert into userdetails values(" + userId + ","
+					+ name + "," + emailId + "," + image + "," + role + ");";
+			stmt.executeUpdate(ss);
 			ResultSet rs = stmt.executeQuery("select * from userdetails where user_id = "
 					+ userId);
 			HashMap<String, String> details = get.resultSetToHashMap(rs);

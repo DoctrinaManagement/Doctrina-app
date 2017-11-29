@@ -48,7 +48,8 @@ public class SignupAuth implements Filter {
 			}
 		} 
 		catch (SQLException e) {
-            System.out.println(e);
+			
+            System.out.println("SignupAuth- "+e);
 		}
 	}
 

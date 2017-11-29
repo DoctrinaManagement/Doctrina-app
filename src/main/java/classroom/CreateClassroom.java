@@ -4,6 +4,7 @@ import java.io.*;
 import javax.servlet.http.*; // import javax.servlet.ServletException;
 
 import database.DatabaseConnection;
+import export.ReUsable;
 
 import java.util.*; // import javax.servlet.http.HttpServletRequest;
 import javax.servlet.*;
@@ -31,6 +32,17 @@ public class CreateClassroom extends HttpServlet {
 		    stmt.executeUpdate("insert into classroom(classroom_name, classroom_description, course, class_creater) values("+
 		    			classroom_name +","+	classroom_description + "," + course + "," + user +");");
 		    
+		    
+		    
+		    // insert notification
+		    String message = "'A new classroom <b>"+request.getParameter("classroom_name")+"</b> has been created.'";
+		    ResultSet rs = stmt.executeQuery("select user_id from settings where course_id ="+course+";");
+		    ReUsable get = new ReUsable();
+		    ArrayList<String> user_id = get.resultSetToUserID(rs);
+		    for(String id : user_id) {
+		    	id = "'"+id+"'";
+		    	stmt.executeUpdate("insert into notification values("+id+","+message+",'true',"+user+");");
+		    }
 		    writer.write("classroom has been created.");
 		} 
 		catch (SQLException e) 
